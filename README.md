@@ -1,3 +1,3 @@
-# clase-25_CSS-AVANZADO
+# clase 25 CSS-AVANZADO
 
 Ejercicios originalmente clonados y luego editados.
