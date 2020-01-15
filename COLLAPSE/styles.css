@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 70%;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+  padding: 20px;
+  color: #eee;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-align: center;
+  background: #6585ab;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: 0.25s;
+}
+
+.lbl-toggle:hover {
+  color: #ccc;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: #ebd755;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 30px 100px;
+}
+
+/*# sourceMappingURL=styles.css.map */
